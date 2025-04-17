@@ -1,7 +1,7 @@
 # Employee Retention Risk Prediction
 A machine learning-based project to identify employees at risk of leaving and help HR make data-driven retention decisions.
 
-![Retention Risk Summary](outputs/Retention_Risk_Analysis_Output.pdf)
+![Risk Breakdown](outputs/Risk_Distribution_PieChart.png)
 
 ## 🧠 Objective
 To build a predictive model for employee retention using historical HR data, identify risk drivers, and present insights for intervention.

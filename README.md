@@ -1,6 +1,7 @@
 # Employee Retention Risk Prediction
-
 A machine learning-based project to identify employees at risk of leaving and help HR make data-driven retention decisions.
+
+![Retention Risk Summary](outputs/Retention_Risk_Distribution_Percentile.png)
 
 ## 🧠 Objective
 To build a predictive model for employee retention using historical HR data, identify risk drivers, and present insights for intervention.
@@ -27,23 +28,42 @@ To build a predictive model for employee retention using historical HR data, ide
 - 10% of employees flagged as high risk
 - SHAP revealed top predictors: Overtime, Promotion Rate, Job Satisfaction
 
-## 📦 Outputs
-- `Retention_Risk_Analysis_Output.xlsx`
-- `Feature_Importance_RF.png`
-- `SHAP_Feature_Impact.png`
-- `Retention_Risk_Distribution_Percentile.png`
-
 ## 📂 Repository Structure
 ```
 employee-retention-risk/
 │
 ├── data/                      # Input dataset
-├── notebooks/                 # Optional: Jupyter notebooks
+├── notebooks/                 # Jupyter notebooks
 ├── outputs/                   # Visuals and Excel outputs
 ├── src/                       # Python scripts
 ├── README.md                  # Project overview
 ├── requirements.txt           # Dependency list
 ```
 
+## 🚀 How to Run This Project
+
+1. Clone the repo  
+2. Install dependencies  
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the script:
+   ```bash
+   python src/retention_model.py
+   ```
+4. Or explore in Jupyter:
+   ```bash
+   jupyter notebook notebooks/Retention_Model_Development.ipynb
+   ```
+
+---
+
+## 💼 Why This Project Matters
+
+This project simulates a real-world People Analytics workflow where HR can identify employees at high risk of leaving. Using explainable AI (SHAP), the model becomes transparent and actionable — enabling HR to prioritize interventions based on data.
+
+---
+
 ## 📜 License
-This project is for educational and demonstration purposes.
+
+This project is for educational and portfolio use. Feel free to use the structure or approach with credit.

@@ -1,8 +1,8 @@
-pandas
-scikit-learn
-shap
-imbalanced-learn
-matplotlib
-seaborn
-openpyxl
-xgboost
+pandas>=1.5
+scikit-learn>=1.1
+shap>=0.41
+imbalanced-learn>=0.10
+matplotlib>=3.5
+seaborn>=0.12
+openpyxl>=3.0
+xgboost>=1.6

@@ -1,6 +1,13 @@
 # 📊 Employee Retention Risk Prediction
 
-A machine learning–based project designed to identify employees at risk of attrition and help HR make proactive, data-informed retention decisions.
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Made with](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blueviolet)
+
+
+A machine learning–driven People Analytics project that identifies employees at risk of leaving and explains the drivers behind attrition. Built to support HR teams in making proactive, data-informed retention decisions.
 
 ![Risk Breakdown](outputs/Risk_Distribution_PieChart.png)
 
@@ -8,7 +15,7 @@ A machine learning–based project designed to identify employees at risk of att
 
 ## 🧠 Objective
 
-To develop a predictive model for employee retention using historical HR data, identify key drivers of turnover, and deliver actionable insights for HR intervention.
+To build a calibrated, interpretable predictive model using HR data that estimates employee attrition risk, uncovers key retention factors, and segments employees into actionable risk tiers for HR intervention.
 
 ---
 
@@ -17,34 +24,34 @@ To develop a predictive model for employee retention using historical HR data, i
 - Python (pandas, scikit-learn, imbalanced-learn, SHAP)
 - Random Forest Classifier + Recursive Feature Elimination (RFE)
 - SMOTE for class balancing
-- Probability calibration and threshold tuning
-- SHAP values for interpretability
+- Probability calibration (Platt scaling)
+- SHAP for model explainability
 - Matplotlib & Seaborn for visualization
 
 ---
 
 ## 🔄 Workflow Summary
 
-1. Preprocessing & feature engineering  
-2. Feature selection via RFE  
-3. Model training with cross-validation (Random Forest)  
-4. Probability calibration for retention risk scores  
-5. Risk segmentation (Low, Moderate, High) using percentiles  
-6. SHAP-based feature importance and explainability  
-7. Final outputs: Excel reports, visual summaries, and tiered risk classification
+1. Data cleaning and feature engineering  
+2. Class balancing using SMOTE  
+3. Feature selection with RFE  
+4. Random Forest model tuning and probability calibration  
+5. Risk scoring and percentile-based tiering (Low, Moderate, High)  
+6. SHAP-based interpretation of feature importance  
+7. Final outputs: Excel reports, risk segmentation, and SHAP visualizations
 
 ---
 
 ## 📈 Key Results
 
 - ✅ **88% model accuracy**
-- 🎯 **98% recall** for identifying leavers (minimizes false negatives)
+- 🎯 **98% recall** for identifying leavers (minimized false negatives)
 - 🔍 **Top predictors**: Overtime, Promotion Rate, Job Satisfaction, Environment Satisfaction
-- ⚠️ **10% of employees flagged as high-risk** for turnover
+- ⚠️ **10% of employees flagged as high risk** using calibrated thresholds
 
 ---
 
-## 📂 Repository Structure
+## 📁 Repository Structure
 
 employee-retention-risk/
 │
@@ -65,3 +72,29 @@ employee-retention-risk/
 │
 ├── README.md                       # Project overview and results
 ├── requirements.txt               # Reproducible environment 
+
+
+---
+
+## 🚀 How to Run This Project
+
+
+# Clone the repository
+```bash
+git clone https://github.com/your-username/employee-retention-risk.git
+cd employee-retention-risk
+
+2. Install dependencies
+pip install -r requirements.txt
+
+3. Run the pipeline script
+python src/retention_pipeline.py
+
+4. Launch the notebook for a full walkthrough
+jupyter notebook notebooks/Full_Retention_Model_Walkthrough_UPDATED.ipynb
+```
+
+
+📜 License
+
+This project is licensed under the MIT License — open for use with attribution.

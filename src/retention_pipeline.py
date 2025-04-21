@@ -7,11 +7,11 @@ assigns risk tiers, and explains predictions using SHAP values. Outputs include 
 Author: Sonny Bigras-Dewan
 """
 
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import shap
-
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.calibration import CalibratedClassifierCV
@@ -81,6 +81,7 @@ def assign_risk(df, probs, output_path):
     p90 = df["Retention_Risk"].quantile(0.90)
 
     df["Risk_Level"] = pd.cut(df["Retention_Risk"], bins=[-float("inf"), p50, p90, float("inf")], labels=["Low Risk", "Moderate Risk", "High Risk"])
+    os.makedirs("outputs", exist_ok=True)
     df.sort_values("Retention_Risk", ascending=False).to_excel(output_path, index=False)
 
 def plot_distribution(df, output_path):
@@ -100,15 +101,28 @@ def plot_distribution(df, output_path):
     plt.close()
 
 def run_shap(model, X_selected, feature_names, output_path):
-    explainer = shap.Explainer(model, X_selected)
+    import shap
+    import matplotlib.pyplot as plt
+    import os
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    base_model = model.calibrated_classifiers_[0].estimator
+    explainer = shap.Explainer(base_model, X_selected)
     shap_values = explainer(X_selected, check_additivity=False)
-    shap.summary_plot(shap_values, pd.DataFrame(X_selected, columns=feature_names), plot_type="bar", show=False)
+
+    # Convert to base values and raw SHAP values
+    values = shap_values.values
+    feature_names = shap_values.feature_names
+
+    # Use classic summary plot fallback (robust)
+    shap.summary_plot(values, features=X_selected, feature_names=feature_names, plot_type="bar", show=False)
+
     plt.tight_layout()
     plt.savefig(output_path)
     plt.close()
 
 def main():
-    df = load_and_engineer_data("data/IBM_Test_Project_Preprocessed_Data.xlsx")
+    df = load_and_engineer_data("/Users/sonnybigras-dewan/PycharmProjects/employee-retention-risk/data/IBM_Test_Project_Preprocessed_Data.xlsx")
     X, X_scaled, y, scaler = preprocess_data(df)
 
     selected_cols = select_features(X_scaled, y, df.drop(columns=["Retained"]).columns)

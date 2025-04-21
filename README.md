@@ -46,7 +46,22 @@ To develop a predictive model for employee retention using historical HR data, i
 
 ## 📂 Repository Structure
 
-employee-retention-risk/ 
-├── data/ # Input dataset 
-├── notebooks/ # Development notebooks ├── outputs/ # Final reports, visualizations ├── src/ # Modular Python scripts ├── requirements.txt # Environment dependencies └── README.md # Project overview
-
+employee-retention-risk/
+│
+├── data/                           # Raw and preprocessed input data
+│   ├── IBM_Test_Project_Preprocessed_Data.xlsx
+│   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
+│
+├── notebooks/                      # Jupyter notebooks with analysis steps
+│   └── Full_Retention_Model_Walkthrough_UPDATED.ipynb
+│
+├── outputs/                        # Final visualizations & export files
+│   ├── Retention_Risk_Analysis_Output.xlsx
+│   ├── Risk_Distribution_PieChart.png
+│ 
+│
+├── src/                            # Python scripts or modular pipeline
+│   └── retention_pipeline.py
+│
+├── README.md                       # Project overview and results
+├── requirements.txt               # Reproducible environment 

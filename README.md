@@ -6,6 +6,8 @@
 ![Made with](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blueviolet)
 
+[![View in nbviewer](https://img.shields.io/badge/View%20Notebook-nbviewer-orange?logo=jupyter)](https://nbviewer.org/github/SonnyBD/employee-retention-risk/blob/main/notebooks/Full_Retention_Model_Walkthrough_UPDATED.ipynb)
+
 
 A machine learning–driven People Analytics project that identifies employees at risk of leaving and explains the drivers behind attrition. Built to support HR teams in making proactive, data-informed retention decisions.
 
@@ -53,34 +55,35 @@ To build a calibrated, interpretable predictive model using HR data that estimat
 
 ## 📁 Repository Structure
 
+```
 employee-retention-risk/
 │
 ├── data/                           # Raw and preprocessed input data
 │   ├── IBM_Test_Project_Preprocessed_Data.xlsx
 │   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
 │
-├── notebooks/                      # Jupyter notebooks with analysis steps
+├── notebooks/                      # Jupyter notebook walkthrough
 │   └── Full_Retention_Model_Walkthrough_UPDATED.ipynb
 │
 ├── outputs/                        # Final visualizations & export files
 │   ├── Retention_Risk_Analysis_Output.xlsx
-│   ├── Risk_Distribution_PieChart.png
-│ 
+│   └── Risk_Distribution_PieChart.png
 │
-├── src/                            # Python scripts or modular pipeline
+├── src/                            # Modular machine learning pipeline
 │   └── retention_pipeline.py
 │
+├── .gitignore                      # Files to exclude from version control
+├── LICENSE                         # MIT open-source license
 ├── README.md                       # Project overview and results
-├── requirements.txt               # Reproducible environment 
-
+└── requirements.txt                # Python environment dependencies
+```
 
 ---
 
 ## 🚀 How to Run This Project
 
-
-# Clone the repository
 ```bash
+1. Clone the repository
 git clone https://github.com/your-username/employee-retention-risk.git
 cd employee-retention-risk
 

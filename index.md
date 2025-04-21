@@ -3,13 +3,13 @@
 
 This project uses machine learning and explainable AI to help HR teams predict which employees are most at risk of leaving — and why.
 
-![SHAP Plot](outputs/Risk_Distribution_PieChart.png)
+![Risk Distribution amongst employees](outputs/Risk_Distribution_PieChart.png)
 
 ---
 
 ## 📈 Key Highlights
 
-- ✅ 88% accuracy | 98% recall for identifying leavers
+- 88% accuracy, 98% recall for identifying leavers
 - 🔍 Top drivers: Overtime, Promotion Rate, Job Satisfaction
 - 🧠 SHAP-based explainability for transparent decision-making
 - 📊 HR-ready Excel output + visual dashboard

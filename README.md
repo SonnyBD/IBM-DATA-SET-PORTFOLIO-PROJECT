@@ -12,7 +12,7 @@
 
 A machine learning–driven People Analytics project that identifies employees at risk of leaving and explains the drivers behind attrition. Built to support HR teams in making proactive, data-informed retention decisions.
 
-![Risk Breakdown](outputs/Risk_Distribution_PieChart.png)
+![Retention Risk Pie Chart showing distribution of low, moderate, and high-risk employees](outputs/Risk_Distribution_PieChart.png)
 
 ---
 

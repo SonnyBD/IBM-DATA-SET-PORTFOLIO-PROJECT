@@ -4,6 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Made with](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter)
+![CI](https://github.com/SonnyBD/employee-retention-risk/actions/workflows/ci.yml/badge.svg)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blueviolet)
 
 [![View in nbviewer](https://img.shields.io/badge/View%20Notebook-nbviewer-orange?logo=jupyter)](https://nbviewer.org/github/SonnyBD/employee-retention-risk/blob/main/notebooks/Full_Retention_Model_Walkthrough.ipynb)

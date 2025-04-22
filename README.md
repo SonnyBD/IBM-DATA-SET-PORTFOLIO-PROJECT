@@ -8,8 +8,6 @@
 
 [![View in nbviewer](https://img.shields.io/badge/View%20Notebook-nbviewer-orange?logo=jupyter)](https://nbviewer.org/github/SonnyBD/employee-retention-risk/blob/main/notebooks/Full_Retention_Model_Walkthrough.ipynb)
 
-
-
 A machine learning–driven People Analytics project that identifies employees at risk of leaving and explains the drivers behind attrition. Built to support HR teams in making proactive, data-informed retention decisions.
 
 ![Retention Risk Pie Chart showing distribution of low, moderate, and high-risk employees](outputs/Risk_Distribution_PieChart.png)
@@ -22,14 +20,14 @@ To build a calibrated, interpretable predictive model using HR data that estimat
 
 ---
 
-## 🧰 Tools & Techniques
+## 🛠️ Tools & Techniques
 
 - Python (pandas, scikit-learn, imbalanced-learn, SHAP)
-- Random Forest Classifier + Recursive Feature Elimination (RFE)
+- XGBoost Classifier + Recursive Feature Elimination (RFE)
 - SMOTE for class balancing
 - Probability calibration (Platt scaling)
 - SHAP for model explainability
-- Matplotlib & Seaborn for visualization
+- Matplotlib for visualizations
 
 ---
 
@@ -38,7 +36,7 @@ To build a calibrated, interpretable predictive model using HR data that estimat
 1. Data cleaning and feature engineering  
 2. Class balancing using SMOTE  
 3. Feature selection with RFE  
-4. Random Forest model tuning and probability calibration  
+4. XGBoost model tuning and probability calibration  
 5. Risk scoring and percentile-based tiering (Low, Moderate, High)  
 6. SHAP-based interpretation of feature importance  
 7. Final outputs: Excel reports, risk segmentation, and SHAP visualizations
@@ -48,13 +46,41 @@ To build a calibrated, interpretable predictive model using HR data that estimat
 ## 📈 Key Results
 
 - ✅ **88% model accuracy**
-- 🎯 **98% recall** for identifying leavers (minimized false negatives)
+- 🎯 **Improved recall** for identifying leavers (minimized false negatives)
 - 🔍 **Top predictors**: Overtime, Promotion Rate, Job Satisfaction, Environment Satisfaction
 - ⚠️ **10% of employees flagged as high risk** using calibrated thresholds
 
 ---
 
-## 📁 Repository Structure
+## 📆 Why This Matters
+
+- 📉 Replacing a lost employee can cost ~33% of their annual salary
+- ⏱️ Manual retention tracking is inefficient and reactive
+- 🧠 This model helps HR prioritize who to retain and why — with explainability
+
+> Empower HR teams with data-backed decisions instead of gut-feeling.
+
+---
+
+## 📃 Example Output
+
+```
+Output directory: ./outputs
+Engineering features...
+After correlation filtering: 44 features
+Best parameters: {'learning_rate': 0.1, ...}
+Best threshold: 0.20, F1: 0.45
+Employee 1 top risk factors:
+  JobSatisfaction     -1.24
+  Doing_Overtime      -0.89
+  Single               1.03
+```
+
+![SHAP Feature Impact](outputs/SHAP_Global_Importance_HR_Friendly.png)
+
+---
+
+## 📂 Repository Structure
 
 ```
 employee-retention-risk/
@@ -84,21 +110,49 @@ employee-retention-risk/
 ## 🚀 How to Run This Project
 
 ```bash
-1. Clone the repository
-git clone https://github.com/your-username/employee-retention-risk.git
+# 1. Clone the repository
+git clone https://github.com/SonnyBD/employee-retention-risk.git
 cd employee-retention-risk
 
-2. Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
-3. Run the pipeline script
+# 3. Run the pipeline script
 python src/retention_pipeline.py
 
-4. Launch the notebook for a full walkthrough
+# 4. Launch the notebook for a full walkthrough
 jupyter notebook notebooks/Full_Retention_Model_Walkthrough_UPDATED.ipynb
 ```
 
+---
 
-📜 License
+## 📁 Dataset
+
+This project uses the [IBM HR Analytics Employee Attrition dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) from Kaggle, with additional preprocessing and feature engineering.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+To contribute:
+```bash
+1. Fork this repository
+2. Clone your fork
+3. Create a feature branch and commit changes
+4. Push and submit a PR
+```
+
+---
+
+## 📜 License
 
 This project is licensed under the MIT License — open for use with attribution.
+
+---
+
+## 👤 Author
+
+Built by [Sonny Bigras-Dewan](https://www.linkedin.com/in/sonny-bigras-dewan/) — let’s connect!
+

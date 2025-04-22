@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="employee_retention",
     version="1.0.0",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(where="employee_retention"),
+    package_dir={"": "employee_retention"},
     install_requires=open("requirements.txt").read().splitlines(),
     author="Sonny Bigras-Dewan",
     description="A calibrated ML pipeline for predicting employee retention risk with SHAP explanations.",
